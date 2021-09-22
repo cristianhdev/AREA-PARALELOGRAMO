@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area del paralelogramo</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+    <link rel="preload" href="styles.css" as="styles">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body onload="init()">
+    <div class="banderin">Unidad 4</div>
+    <div class="contendor-bienvenida">
+        <div class="contenido-actividad-bienvenida">
+            <div class="recuadro-explicacion-1 animate__animated animate__fadeIn" id="slide-1">
+                <div class="titulo-interactiva">
+                    <h1 class="animate__animated animate__fadeInLeft" style="text-shadow: 2px 3px 2px #a0a0ba;">
+                        Área del paralelogramo</h1>
+
+                    <!--<img src="./public/assets/Img/images/Personaje_inicio.png" />-->
+                    <p class="animate__animated animate__fadeIn animate_delay-s5">A continuación podrás observar cómo se
+                        calcula el área del paralelogramo.</p>
+                </div>
+
+
+            </div>
+            <div class="recuadro-explicacion-2 animate__animated animate__fadeIn" id="slide-2">
+                <div class="contenedor-explicacion">
+                    <h4>1. Por qué son paralelogramos</h4>
+                    <div class="contenedor">
+                        <video  width="420" height="360" id="videoescena1" postert="./assets/imagenes/paraleloescena1-prueba.mp4"  inline>
+                            <!-- <source src="eye-of-the-tiger-video.webm" type="video/webm"> -->
+                            <source src="./assets/imagenes/paraleloescena1-prueba.mp4" type="video/mp4">
+                           <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
+                        </video>
+                        <!-- <img src="./assets/imagenes/paralelo.mp4"> -->
+                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                            <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
+                        </div> -->
+                        <div class="contenedor-explicacion-paralelogramo">
+                            explicacion
+                            <div id="ejemplo"></div>
+                            <div id="dd"></div>
+                            
+                        </div>
+                        <div class="button" onclick="cortar()">Animar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="recuadro-explicacion-3 animate__animated animate__fadeIn" id="slide-3">
+                <h4>2.Calcular el área.</h4>
+                    <div class="contenedor">
+                        <video  width="420" height="360" id="videoescena2" postert="./assets/imagenes/paraleloescena2-prueba.gif"  inline>
+                          <!--   <source src="eye-of-the-tiger-video.webm" type="video/webm"> -->
+                            <source src="./assets/imagenes/paraleloescena2-prueba.mp4" type="video/mp4">
+                           <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
+                        </video>
+                        <!-- <img src="./assets/imagenes/paraleloescena2.gif"> -->
+                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                            <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
+                        </div> -->
+                        <div class="contenedor-explicacion-paralelogramo">
+                            explicacion
+                            <div id="ejemplo"></div>
+                            <div id="dd"></div>
+                            
+                        </div>
+                        <div class="button" onclick="cortar()">Animar</div>
+                    </div>
+            </div>
+            <div class="recuadro-explicacion-4 animate__animated animate__fadeIn" id="slide-4">
+                <h4>3. Fórmula del área.</h4>
+                    <div class="contenedor">
+                        <video  width="420" height="360" id="videoescena3" postert="./assets/imagenes/paraleloescena3.mp4"  inline>
+                            <source src="eye-of-the-tiger-video.webm" type="video/webm">
+                            <source src="./assets/imagenes/paraleloescena3.mp4" type="video/mp4">
+                            <img src="./assets/imagenes/paralelo-explicacion.gif" />
+                        </video>
+                        <!-- <img src="./assets/imagenes/escena3.gif"> -->
+                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                            <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
+                        </div> -->
+                        <div class="contenedor-explicacion-paralelogramo">
+                            explicacion
+                            <div id="ejemplo"></div>
+                            <div id="dd"></div>
+                            
+                        </div>
+                        <div class="button" onclick="cortar()">Animar</div>
+                    </div>
+            </div>
+            <div class="recuadro-explicacion-5 animate__animated animate__fadeIn" id="slide-5">
+                <h4>4. En conclusión.</h4>
+                    <div class="contenedor">
+                        <video  width="420" height="360" id="videoescena4" postert="./assets/imagenes/paraleloescena4.mp4"  inline>
+                            <source src="eye-of-the-tiger-video.webm" type="video/webm">
+                            <source src="./assets/imagenes/paraleloescena4.mp4" type="video/mp4">
+                            <img src="./assets/imagenes/paralelo-explicacion.gif" />
+                        </video>
+                        <!-- <img src="./assets/imagenes/escena3.gif"> -->
+                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                            <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
+                        </div> -->
+                        <div class="contenedor-explicacion-paralelogramo">
+                            explicacion
+                            <div id="ejemplo"></div>
+                            <div id="dd"></div>
+                            
+                        </div>
+                        <div class="button" onclick="cortar()">Animar</div>
+                    </div>
+            </div>
+            <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">
+                <div onclick="atras()" id="atras" class="button" />◀&nbsp;Atras
+            </div>
+            <!-- <div class="button" onclick="cortar()">Cortar</div> -->
+            <div onclick="siguiente()" id="siguiente" class="button" />Siguiente&nbsp;▶
+        </div>
+        <!-- <div onclick="siguiente()" id="actividad" class="button" />Listo&nbsp;✍
+        </div> -->
+    </div>
+  
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
