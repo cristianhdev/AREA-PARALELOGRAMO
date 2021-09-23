@@ -118,11 +118,26 @@
             <div class="recuadro-explicacion-6 animate__animated animate__fadeIn" id="slide-6">
                 <h4>Ejercicio</h4>
                 <div class="contenedor-actividades">
+                    <div class="contenedor-figuraA">
                     <div class="ejercicio-1">
                         <div id="figura1B"></div>
                         <div id="figura1A"></div>
-                        <div class="button" onclick="cortar(1)">Cortar</div>
                     </div>
+                    <div id="inputs-b-h">
+                        b=<input id="input-b" type="text">
+                        h=<input id="input-h" type="text">
+                    </div>
+                    <div class="button_cortar" id="cortar-ejercicio1" onclick="cortar(1)">Cortar</div>
+                    <div class="button_cortar" id="comprobar-ejercicio1" onclick="actividadValidacion(1)">Comprobar</div>
+                    <div class="inputs" id="contenedor-inputs-actividad1">
+                        <div><span>A = b * h</span></div>
+                        <div>A = <input type="text" id="input-b-m"> * <input type="text" id="input-h-m"></div>
+                        <div>A = <input type="text" id="resultado"></div>
+                     </div>
+                    </div>
+                   
+                </div>
+                    
 
                     <div class="ejercicio-2">
                         <div id="figura2A"></div>
@@ -141,7 +156,7 @@
                         <div id="figura4B"></div>
                         <div class="button" onclick="cortar(4)">Cortar</div>
                     </div>
-                </div>
+                
 
 
             </div>

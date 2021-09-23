@@ -3,6 +3,15 @@
 let sliders = ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6']
 let audios_sond = ['Audio1', 'paralelogramo1', 'paralelogramo2', 'paralelogramo3', 'paralelogramo4']
 
+let respuestasInputs=[
+	{
+		'base':5,//base
+		'altura':3,//altura,
+		'multiplicacion':[5,3],//input-base * input-altura
+		'resultado':15,//resultado
+	}
+]
+
 let presentacion_slide = 0
 let audio;
 let audioOvers;
@@ -160,7 +169,16 @@ function cortar(posicion) {
 			gsap.to('#figura1B', {
 				duration: 3,
 				x:129,
-				ease:Back.easeOut
+				ease:Back.easeOut,
+				onComplete() {
+					document.getElementById('cortar-ejercicio1').style.display='none'
+					document.getElementById('comprobar-ejercicio1').style.display='block'
+					console.log('whole tween done');
+					document.getElementById('inputs-b-h').style.display='block'
+					document.getElementById('contenedor-inputs-actividad1').style.display='block'
+					
+					
+				  },
 			  })
 			break;
 		case 2:
@@ -205,4 +223,35 @@ function stopAllVideos() {
 	videoEscenas.forEach(element => {
 		element.pause()
 	});
+}
+
+function actividadValidacion(posicion){
+	//Capturamos los valores ingresados
+	let base=document.getElementById('input-b')
+	let altura=document.getElementById('input-h')
+	let inputMulb=document.getElementById('input-b-m')
+	let inputMulh=document.getElementById('input-h-m')
+	let resultado=document.getElementById('resultado')
+
+	//validamos base
+	if(base.value!=respuestasInputs[0].base || altura.value!=respuestasInputs[0].altura){
+		alert('error base o la altura')
+		/* base.style.borderColor='red' */
+	}else{
+		if(inputMulb.value!=respuestasInputs[0].multiplicacion[0] || inputMulh.value!=respuestasInputs[0].multiplicacion[1]){
+			alert('error multiplicacion')
+		}else{
+			if(resultado.value!=respuestasInputs[0].resultado){
+				alert('error resultado')
+			}else{
+				alert('todo ok')
+			}
+		}
+	}
+
+
+	console.log(respuestasInputs[0].base);
+	console.log(respuestasInputs[0].altura);
+	console.log(respuestasInputs[0].multiplicacion);
+	console.log(respuestasInputs[0].resultado);
 }
