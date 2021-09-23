@@ -139,7 +139,6 @@ function presentacion() {
 		//document.getElementById('atras').style.display = "none"
 		document.getElementById('atras').style.display = "inline-block"
 		document.getElementById('atras').style.visibility = "visible"
-		document.getElementById('siguiente').style.display = "none"
 
 	} else {
 		document.getElementById('siguiente').style.display = "inline-block"
@@ -185,7 +184,6 @@ function getCurrentSlider() {
 function cortar() {
 	
 	posicionCorteFigura++
-	alert(posicionCorteFigura)
 	switch (posicionCorteFigura) {
 		case 1:
 			gsap.to('#figura1B', {
@@ -255,12 +253,13 @@ function finAnimacion() {
 	//document.getElementById('comprobar-ejercicio1').style.display = 'block'
 	document.getElementById('comprobar-ejercicio1').classList.remove("enebled-boton")
 	console.log('whole tween done');
-	document.getElementById('inputs-b-h').style.display = 'block'
-	document.getElementById('contenedor-inputs-actividad1').style.display = 'block'
+	document.getElementById('inputs-b-h').style.display = 'flex'
+	document.getElementById('contenedor-inputs-actividad1').style.display = 'flex'
 }
 
 function actividadValidacion(posicion) {
 	//Capturamos los valores ingresados
+	
 	let base = document.getElementById('input-b')
 	let altura = document.getElementById('input-h')
 	let inputMulb = document.getElementById('input-b-m')
@@ -269,17 +268,30 @@ function actividadValidacion(posicion) {
 
 	//validamos base
 	if (base.value != respuestasInputs[posicionCorteFigura-1].base || altura.value != respuestasInputs[posicionCorteFigura-1].altura) {
-		alert('error base o la altura')
+		//alert('error base o la altura')
+			document.getElementById('imagen-correcta-b-h').style.display='none'
+			document.getElementById('imagen-incorrecta-b-h').style.display='inline-flex'
 		/* base.style.borderColor='red' */
 	} else {
+		document.getElementById('imagen-correcta-b-h').style.display='inline-flex'
+		document.getElementById('imagen-incorrecta-b-h').style.display='none'
 		if (inputMulb.value != respuestasInputs[posicionCorteFigura-1].multiplicacion[0] || inputMulh.value != respuestasInputs[posicionCorteFigura-1].multiplicacion[1]) {
-			alert('error multiplicacion')
+			//alert('error multiplicacion')
+			document.getElementById('imagen-correcta-resultado').style.display='none'
+			document.getElementById('imagen-incorrecta-resultado').style.display='inline-flex'
 		} else {
+			document.getElementById('imagen-incorrecta-resultado').style.display='none'
+			document.getElementById('imagen-correcta-resultado').style.display='inline-flex'
 			if (resultado.value != respuestasInputs[posicionCorteFigura-1].resultado) {
-				alert('error resultado')
+				//alert('error resultado')
+				document.getElementById('imagen-correcta-resultado').style.display='none'
+				document.getElementById('imagen-incorrecta-resultado').style.display='inline-flex'
 			} else {
 				alert('todo ok')
+				document.getElementById('comprobar-ejercicio1').classList.add("enebled-boton")
 				document.getElementById('siguiente_ejercicio').classList.remove("enebled-boton")
+				document.getElementById('imagen-incorrecta-resultado').style.display='none'
+				document.getElementById('imagen-correcta-resultado').style.display='inline-flex'
 			}
 		}
 	}
@@ -294,19 +306,28 @@ function actividadValidacion(posicion) {
 function siguiente_ejercicio(){
 	if(posicionCorteFigura==4){
 		posicionCorteFigura=0
-	}	
+		document.getElementById(figurasEjercicios[posicionCorteFigura.length-1]).style.display='none';
+		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='block'
+	}else{
+	document.getElementById(figurasEjercicios[posicionCorteFigura-1]).style.display='none';
+	document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='block'
+	}
 	document.getElementById('siguiente_ejercicio').classList.add("enebled-boton")
 	document.getElementById('comprobar-ejercicio1').classList.add("enebled-boton")
+	document.getElementById('imagen-incorrecta-resultado').style.display='none'
+	document.getElementById('imagen-correcta-resultado').style.display='none'
 	document.getElementById('cortar-ejercicio1').style.display = 'block'
+	document.getElementById('imagen-correcta-b-h').style.display='none'
+	document.getElementById('imagen-incorrecta-b-h').style.display='none'
 	//Limpiamos las cajas de la actividad.
 	document.getElementById('input-b').value=""
 	document.getElementById('input-h').value=""
 	document.getElementById('input-b-m').value=""
 	document.getElementById('input-h-m').value=""
 	document.getElementById('resultado').value=""
-	alert(figurasEjercicios[posicionCorteFigura-1])
-	document.getElementById(figurasEjercicios[posicionCorteFigura-1]).style.display='none';
+	
+	
 	document.getElementById('contenedor-inputs-actividad1').style.display='none';
 	document.getElementById('inputs-b-h').style.display='none';
-	document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='block'
+	
 }
