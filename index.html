@@ -118,46 +118,47 @@
             <div class="recuadro-explicacion-6 animate__animated animate__fadeIn" id="slide-6">
                 <h4>Ejercicio</h4>
                 <div class="contenedor-actividades">
-                    <div class="contenedor-figuraA">
-                    <div class="ejercicio-1">
+                    <div class="contenedor-figuras">
+                    <div id="ejercicio-1">
                         <div id="figura1B"></div>
                         <div id="figura1A"></div>
                     </div>
+                    <div id="ejercicio-2">
+                        <div id="figura2A"></div>
+                        <div id="figura2B"></div>
+                        
+                    </div>
+                    <div id="ejercicio-3">
+                        <div id="figura3A"></div>
+                        <div id="figura3B"></div>
+                        
+                    </div>
+                    
+                    <div id="ejercicio-4">
+                        <div id="figura4A"></div>
+                        <div id="figura4B"></div>
+                        
+                    </div>
+
                     <div id="inputs-b-h">
                         b=<input id="input-b" type="text">
                         h=<input id="input-h" type="text">
                     </div>
-                    <div class="button_cortar" id="cortar-ejercicio1" onclick="cortar(1)">Cortar</div>
-                    <div class="button_cortar" id="comprobar-ejercicio1" onclick="actividadValidacion(1)">Comprobar</div>
+                   
                     <div class="inputs" id="contenedor-inputs-actividad1">
                         <div><span>A = b * h</span></div>
                         <div>A = <input type="text" id="input-b-m"> * <input type="text" id="input-h-m"></div>
                         <div>A = <input type="text" id="resultado"></div>
                      </div>
                     </div>
-                   
-                </div>
                     
-
-                    <div class="ejercicio-2">
-                        <div id="figura2A"></div>
-                        <div id="figura2B"></div>
-                        <div class="button" onclick="cortar(2)">Cortar</div>
-                    </div>
-
-                    <div class="ejercicio-3">
-                        <div id="figura3A"></div>
-                        <div id="figura3B"></div>
-                        <div class="button" onclick="cortar(3)">Cortar</div>
-                    </div>
-
-                    <div class="ejercicio-4">
-                        <div id="figura4A"></div>
-                        <div id="figura4B"></div>
-                        <div class="button" onclick="cortar(4)">Cortar</div>
-                    </div>
+                </div>
+                <div class="botones-actividad">
+                    <div class="button_cortar" id="cortar-ejercicio1" onclick="cortar()">Cortar</div>
+                <div class="button_cortar enebled-boton" id="comprobar-ejercicio1" onclick="actividadValidacion(1)">Comprobar</div>
+                <div onclick="siguiente_ejercicio()" id="siguiente_ejercicio" class="button_cortar enebled-boton" >Siguiente&nbsp;▶</div>
+                </div>
                 
-
 
             </div>
             <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">

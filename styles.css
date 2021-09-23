@@ -236,7 +236,14 @@ h4{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 55vh;
+    height: 48vh;
+}
+
+.botones-actividad{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contenedor-imagen-paralelogramo{
@@ -289,13 +296,13 @@ h4{
 
   #figura2A {
     width: 138px;
-    height: 99px;
+    height: 122px;
     background-image: url(./assets/imagenes/actividadimagenes/p2A.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto;
     display: inline-block;
-    z-index: 999999;
+    z-index: 9999999;
     }
   
     #figura2B {
@@ -361,15 +368,40 @@ h4{
 }
 
 
-.ejercicio-1{
+#ejercicio-1{
   display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.ejercicio-2,.ejercicio-3,.ejercicio-4{
+#ejercicio-2{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#ejercicio-3{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#ejercicio-4{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#ejercicio-2,#ejercicio-3,#ejercicio-4{
 display: none;
+}
+
+.contenedor-figuras{
+  height:30vh
 }
 
 
@@ -389,11 +421,15 @@ input[type="text"]{
   display:none;
 }
 
-#comprobar-ejercicio1{
+/* #comprobar-ejercicio1{
   display:none;
+} */
+
+.enebled-boton{
+  filter:grayscale(1);
+  cursor:none;
+  pointer-events: none;
 }
-
-
 
 
 .inputs{
@@ -533,5 +569,9 @@ input[type="text"]{
     #videoescena1, #videoescena2,#videoescena3,#videoescena4 {
         margin: 0px auto;
         width: 40vh;
+    }
+
+    .botones-actividad{
+      flex-direction:column ;
     }
   }

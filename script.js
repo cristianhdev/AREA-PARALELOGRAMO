@@ -2,13 +2,32 @@
 
 let sliders = ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6']
 let audios_sond = ['Audio1', 'paralelogramo1', 'paralelogramo2', 'paralelogramo3', 'paralelogramo4']
-
-let respuestasInputs=[
+let figurasEjercicios= ['ejercicio-1','ejercicio-2','ejercicio-3','ejercicio-4']
+let posicionCorteFigura=0;
+let respuestasInputs = [
 	{
-		'base':5,//base
-		'altura':3,//altura,
-		'multiplicacion':[5,3],//input-base * input-altura
-		'resultado':15,//resultado
+		'base': 5,//base
+		'altura': 3,//altura,
+		'multiplicacion': [5, 3],//input-base * input-altura
+		'resultado': 15,//resultado
+	},
+	{
+		'base': 8,//base
+		'altura': 3,//altura,
+		'multiplicacion': [8, 3],//input-base * input-altura
+		'resultado': 24,//resultado
+	},
+	{
+		'base': 9,//base
+		'altura': 4,//altura,
+		'multiplicacion': [9, 4],//input-base * input-altura
+		'resultado': 36,//resultado
+	},
+	{
+		'base': 7,//base
+		'altura': 2,//altura,
+		'multiplicacion': [7, 2],//input-base * input-altura
+		'resultado': 14,//resultado
 	}
 ]
 
@@ -163,49 +182,55 @@ function getCurrentSlider() {
 	return presentacion_slide
 }
 
-function cortar(posicion) {
-	switch (posicion) {
+function cortar() {
+	
+	posicionCorteFigura++
+	alert(posicionCorteFigura)
+	switch (posicionCorteFigura) {
 		case 1:
 			gsap.to('#figura1B', {
 				duration: 3,
-				x:129,
-				ease:Back.easeOut,
+				x: 127,
+				ease: Back.easeOut,
 				onComplete() {
-					document.getElementById('cortar-ejercicio1').style.display='none'
-					document.getElementById('comprobar-ejercicio1').style.display='block'
-					console.log('whole tween done');
-					document.getElementById('inputs-b-h').style.display='block'
-					document.getElementById('contenedor-inputs-actividad1').style.display='block'
-					
-					
-				  },
-			  })
+					finAnimacion()
+				},
+			})
 			break;
 		case 2:
-			
+
 			gsap.to('#figura2A', {
 				duration: 3,
-				x:240,
-				ease:Back.easeOut
-			  })
+				x: 242,
+				ease: Back.easeOut,
+				onComplete() {
+					finAnimacion()
+				},
+			})
 			break;
 		case 3:
-			
-			
+
+
 			gsap.to('#figura3A', {
 				duration: 3,
-				x: 213,
-				ease:Back.easeOut
-			  })
+				x: 215,
+				ease: Back.easeOut,
+				onComplete() {
+					finAnimacion()
+				},
+			})
 			break;
 		case 4:
-			
+
 			gsap.to('#figura4A', {
 				duration: 3,
 				x: 190,
-				ease:Back.easeOut
-			  })
-			
+				ease: Back.easeOut,
+				onComplete() {
+					finAnimacion()
+				},
+			})
+
 			break;
 
 		default:
@@ -225,26 +250,36 @@ function stopAllVideos() {
 	});
 }
 
-function actividadValidacion(posicion){
+function finAnimacion() {
+	document.getElementById('cortar-ejercicio1').style.display = 'none'
+	//document.getElementById('comprobar-ejercicio1').style.display = 'block'
+	document.getElementById('comprobar-ejercicio1').classList.remove("enebled-boton")
+	console.log('whole tween done');
+	document.getElementById('inputs-b-h').style.display = 'block'
+	document.getElementById('contenedor-inputs-actividad1').style.display = 'block'
+}
+
+function actividadValidacion(posicion) {
 	//Capturamos los valores ingresados
-	let base=document.getElementById('input-b')
-	let altura=document.getElementById('input-h')
-	let inputMulb=document.getElementById('input-b-m')
-	let inputMulh=document.getElementById('input-h-m')
-	let resultado=document.getElementById('resultado')
+	let base = document.getElementById('input-b')
+	let altura = document.getElementById('input-h')
+	let inputMulb = document.getElementById('input-b-m')
+	let inputMulh = document.getElementById('input-h-m')
+	let resultado = document.getElementById('resultado')
 
 	//validamos base
-	if(base.value!=respuestasInputs[0].base || altura.value!=respuestasInputs[0].altura){
+	if (base.value != respuestasInputs[posicionCorteFigura-1].base || altura.value != respuestasInputs[posicionCorteFigura-1].altura) {
 		alert('error base o la altura')
 		/* base.style.borderColor='red' */
-	}else{
-		if(inputMulb.value!=respuestasInputs[0].multiplicacion[0] || inputMulh.value!=respuestasInputs[0].multiplicacion[1]){
+	} else {
+		if (inputMulb.value != respuestasInputs[posicionCorteFigura-1].multiplicacion[0] || inputMulh.value != respuestasInputs[posicionCorteFigura-1].multiplicacion[1]) {
 			alert('error multiplicacion')
-		}else{
-			if(resultado.value!=respuestasInputs[0].resultado){
+		} else {
+			if (resultado.value != respuestasInputs[posicionCorteFigura-1].resultado) {
 				alert('error resultado')
-			}else{
+			} else {
 				alert('todo ok')
+				document.getElementById('siguiente_ejercicio').classList.remove("enebled-boton")
 			}
 		}
 	}
@@ -254,4 +289,24 @@ function actividadValidacion(posicion){
 	console.log(respuestasInputs[0].altura);
 	console.log(respuestasInputs[0].multiplicacion);
 	console.log(respuestasInputs[0].resultado);
+}
+
+function siguiente_ejercicio(){
+	if(posicionCorteFigura==4){
+		posicionCorteFigura=0
+	}	
+	document.getElementById('siguiente_ejercicio').classList.add("enebled-boton")
+	document.getElementById('comprobar-ejercicio1').classList.add("enebled-boton")
+	document.getElementById('cortar-ejercicio1').style.display = 'block'
+	//Limpiamos las cajas de la actividad.
+	document.getElementById('input-b').value=""
+	document.getElementById('input-h').value=""
+	document.getElementById('input-b-m').value=""
+	document.getElementById('input-h-m').value=""
+	document.getElementById('resultado').value=""
+	alert(figurasEjercicios[posicionCorteFigura-1])
+	document.getElementById(figurasEjercicios[posicionCorteFigura-1]).style.display='none';
+	document.getElementById('contenedor-inputs-actividad1').style.display='none';
+	document.getElementById('inputs-b-h').style.display='none';
+	document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='block'
 }
