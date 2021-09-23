@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
     <link rel="preload" href="styles.css" as="styles">
     <link rel="preload" href="script.js" as="script">
+    <script src="gsap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
@@ -32,10 +33,11 @@
                 <div class="contenedor-explicacion">
                     <h4>1. Por qué son paralelogramos</h4>
                     <div class="contenedor">
-                        <video  width="420" height="360" id="videoescena1" postert="./assets/imagenes/paraleloescena1-prueba.mp4"  inline>
+                        <video width="420" height="360" id="videoescena1"
+                            postert="./assets/imagenes/paraleloescena1-prueba.mp4" inline>
                             <!-- <source src="eye-of-the-tiger-video.webm" type="video/webm"> -->
                             <source src="./assets/imagenes/paraleloescena1-prueba.mp4" type="video/mp4">
-                           <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
+                            <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
                         </video>
                         <!-- <img src="./assets/imagenes/paralelo.mp4"> -->
                         <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
@@ -43,76 +45,105 @@
                         </div> -->
                         <div class="contenedor-explicacion-paralelogramo">
                             explicacion
-                            <div id="ejemplo"></div>
-                            <div id="dd"></div>
-                            
+
+
                         </div>
-                        <div class="button" onclick="cortar()">Animar</div>
+
                     </div>
                 </div>
             </div>
             <div class="recuadro-explicacion-3 animate__animated animate__fadeIn" id="slide-3">
                 <h4>2.Calcular el área.</h4>
-                    <div class="contenedor">
-                        <video  width="420" height="360" id="videoescena2" postert="./assets/imagenes/paraleloescena2-prueba.gif"  inline>
-                          <!--   <source src="eye-of-the-tiger-video.webm" type="video/webm"> -->
-                            <source src="./assets/imagenes/paraleloescena2-prueba.mp4" type="video/mp4">
-                           <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
-                        </video>
-                        <!-- <img src="./assets/imagenes/paraleloescena2.gif"> -->
-                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                <div class="contenedor">
+                    <video width="420" height="360" id="videoescena2"
+                        postert="./assets/imagenes/paraleloescena2-prueba.gif" inline>
+                        <!--   <source src="eye-of-the-tiger-video.webm" type="video/webm"> -->
+                        <source src="./assets/imagenes/paraleloescena2-prueba.mp4" type="video/mp4">
+                        <!--  <img src="./assets/imagenes/paralelo-explicacion.gif" /> -->
+                    </video>
+                    <!-- <img src="./assets/imagenes/paraleloescena2.gif"> -->
+                    <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                        <div class="contenedor-explicacion-paralelogramo">
-                            explicacion
-                            <div id="ejemplo"></div>
-                            <div id="dd"></div>
-                            
-                        </div>
-                        <div class="button" onclick="cortar()">Animar</div>
+                    <div class="contenedor-explicacion-paralelogramo">
+                        explicacion
+
+
                     </div>
+
+                </div>
             </div>
             <div class="recuadro-explicacion-4 animate__animated animate__fadeIn" id="slide-4">
                 <h4>3. Fórmula del área.</h4>
-                    <div class="contenedor">
-                        <video  width="420" height="360" id="videoescena3" postert="./assets/imagenes/paraleloescena3.mp4"  inline>
-                            <source src="eye-of-the-tiger-video.webm" type="video/webm">
-                            <source src="./assets/imagenes/paraleloescena3.mp4" type="video/mp4">
-                            <img src="./assets/imagenes/paralelo-explicacion.gif" />
-                        </video>
-                        <!-- <img src="./assets/imagenes/escena3.gif"> -->
-                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                <div class="contenedor">
+                    <video width="420" height="360" id="videoescena3" postert="./assets/imagenes/paraleloescena3.mp4"
+                        inline>
+                        <source src="eye-of-the-tiger-video.webm" type="video/webm">
+                        <source src="./assets/imagenes/paraleloescena3.mp4" type="video/mp4">
+                        <img src="./assets/imagenes/paralelo-explicacion.gif" />
+                    </video>
+                    <!-- <img src="./assets/imagenes/escena3.gif"> -->
+                    <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                        <div class="contenedor-explicacion-paralelogramo">
-                            explicacion
-                            <div id="ejemplo"></div>
-                            <div id="dd"></div>
-                            
-                        </div>
-                        <div class="button" onclick="cortar()">Animar</div>
+                    <div class="contenedor-explicacion-paralelogramo">
+                        explicacion
+
+
                     </div>
+
+                </div>
             </div>
             <div class="recuadro-explicacion-5 animate__animated animate__fadeIn" id="slide-5">
                 <h4>4. En conclusión.</h4>
-                    <div class="contenedor">
-                        <video  width="420" height="360" id="videoescena4" postert="./assets/imagenes/paraleloescena4.mp4"  inline>
-                            <source src="eye-of-the-tiger-video.webm" type="video/webm">
-                            <source src="./assets/imagenes/paraleloescena4.mp4" type="video/mp4">
-                            <img src="./assets/imagenes/paralelo-explicacion.gif" />
-                        </video>
-                        <!-- <img src="./assets/imagenes/escena3.gif"> -->
-                        <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
+                <div class="contenedor">
+                    <video width="420" height="360" id="videoescena4" postert="./assets/imagenes/paraleloescena4.mp4"
+                        inline>
+                        <source src="eye-of-the-tiger-video.webm" type="video/webm">
+                        <source src="./assets/imagenes/paraleloescena4.mp4" type="video/mp4">
+                        <img src="./assets/imagenes/paralelo-explicacion.gif" />
+                    </video>
+                    <!-- <img src="./assets/imagenes/escena3.gif"> -->
+                    <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                        <div class="contenedor-explicacion-paralelogramo">
-                            explicacion
-                            <div id="ejemplo"></div>
-                            <div id="dd"></div>
-                            
-                        </div>
-                        <div class="button" onclick="cortar()">Animar</div>
+                    <div class="contenedor-explicacion-paralelogramo">
+                        explicacion
+
+
                     </div>
+
+                </div>
+            </div>
+            <div class="recuadro-explicacion-6 animate__animated animate__fadeIn" id="slide-6">
+                <h4>Ejercicio</h4>
+                <div class="contenedor-actividades">
+                    <div class="ejercicio-1">
+                        <div id="figura1B"></div>
+                        <div id="figura1A"></div>
+                        <div class="button" onclick="cortar(1)">Cortar</div>
+                    </div>
+
+                    <div class="ejercicio-2">
+                        <div id="figura2A"></div>
+                        <div id="figura2B"></div>
+                        <div class="button" onclick="cortar(2)">Cortar</div>
+                    </div>
+
+                    <div class="ejercicio-3">
+                        <div id="figura3A"></div>
+                        <div id="figura3B"></div>
+                        <div class="button" onclick="cortar(3)">Cortar</div>
+                    </div>
+
+                    <div class="ejercicio-4">
+                        <div id="figura4A"></div>
+                        <div id="figura4B"></div>
+                        <div class="button" onclick="cortar(4)">Cortar</div>
+                    </div>
+                </div>
+
+
             </div>
             <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">
                 <div onclick="atras()" id="atras" class="button" />◀&nbsp;Atras
@@ -123,7 +154,7 @@
         <!-- <div onclick="siguiente()" id="actividad" class="button" />Listo&nbsp;✍
         </div> -->
     </div>
-  
+
     <script type="text/javascript" src="script.js"></script>
 </body>
 
