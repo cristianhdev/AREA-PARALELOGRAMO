@@ -142,10 +142,10 @@
 
                     <div id="inputs-b-h">
                         <div>
-                            b= <input id="input-b" type="text">
+                            b= <input id="input-b" type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
                         </div>
                         <div>
-                            h= <input id="input-h" type="text">
+                            h= <input id="input-h" type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
                         </div>
                         <div>
                             <div id="imagen-correcta-b-h" type="text"></div>
@@ -156,9 +156,9 @@
                    
                     <div class="inputs" id="contenedor-inputs-actividad1">
                         <div><span>A = b <span class="ast">*</span> h</span></div>
-                        <div>A = <input type="text" id="input-b-m"> <span class="ast">*</span> <input type="text" id="input-h-m">
+                        <div>A = <input type="text" id="input-b-m" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"> <span class="ast">*</span> <input type="text" id="input-h-m" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
                         </div>
-                        <div>A = <input type="text" id="resultado">
+                        <div>A = <input type="text" id="resultado" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"> Cuadritos
                             <div id="imagen-correcta-resultado"></div>
                             <div id="imagen-incorrecta-resultado"></div>
                         </div>

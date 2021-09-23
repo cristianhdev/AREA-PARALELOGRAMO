@@ -305,8 +305,9 @@ function actividadValidacion(posicion) {
 
 function siguiente_ejercicio(){
 	if(posicionCorteFigura==4){
+		
+		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='none';
 		posicionCorteFigura=0
-		document.getElementById(figurasEjercicios[posicionCorteFigura.length-1]).style.display='none';
 		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display='block'
 	}else{
 	document.getElementById(figurasEjercicios[posicionCorteFigura-1]).style.display='none';
