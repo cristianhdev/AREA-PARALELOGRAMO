@@ -159,7 +159,7 @@ h4{
 
     .button_cortar{text-decoration:none; text-align:center; 
       padding:9px 22px; 
-      width:200px;
+      width:100px;
       border:solid 1px #720000; 
       -webkit-border-radius:4px;
       -moz-border-radius:4px; 
@@ -182,7 +182,7 @@ h4{
        
   .button_cortar:hover{
       padding:9px 22px; 
-      width:200px;
+      width:100px;
       border:solid 1px #720000; 
       -webkit-border-radius:4px;
       -moz-border-radius:4px; 
@@ -223,7 +223,7 @@ h4{
     justify-content: center;
     align-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     width:100%;
     height:53vh;
     
@@ -236,11 +236,9 @@ h4{
     align-items: center;
     flex-direction: column;
     width: 80%;
-    height: 45vh;
-    border: 2px solid silver;
+    height: 62vh;
     padding: 11px 3px;
     margin: 10px auto;
-    border-radius: 12px 12px;
 }
 
 #imagen-correcta-resultado{
@@ -294,6 +292,7 @@ h4{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .contenedor-imagen-paralelogramo{
@@ -318,8 +317,14 @@ h4{
 
 
 .contenedor-explicacion-paralelogramo{
-    width:50%;
-    height:53vh;
+  justify-content: center;
+  width: 50%;
+  height: 53vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  margin: 0px auto;
 }
 
 #figura1A {
@@ -515,15 +520,29 @@ input[type="text"]{
   width: auto;
   display: none;
   text-align: center;
-  padding: 12px 2px;
+  padding: 5px 2px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .ast{
   color:red;
-  font-size: 18px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+#mensajeActividad{
+ 
+  text-align: center;
+    display: inline-block;
+    visibility: hidden;
+    position: relative;
+    font-size: 1.2em;
+    width: 100%;
+    height: 30px;
+    color:red
 }
     /* 
   ##Device = Desktops
@@ -636,7 +655,7 @@ input[type="text"]{
         align-items: center;
         flex-direction: column;
         width: 37vh;
-        height: 80vh;
+        height: 49vh;
     }
  
     #videoescena1, #videoescena2,#videoescena3,#videoescena4 {

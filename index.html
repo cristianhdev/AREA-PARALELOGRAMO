@@ -43,8 +43,9 @@
                         <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                        <div class="contenedor-explicacion-paralelogramo">
-                            explicacion
+                        <div class="contenedor-explicacion-paralelogramo animate__animated animate__fadeIn"
+                            id="texto-explicacion-1">
+
 
 
                         </div>
@@ -65,8 +66,8 @@
                     <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                    <div class="contenedor-explicacion-paralelogramo">
-                        explicacion
+                    <div class="contenedor-explicacion-paralelogramo" id="texto-explicacion-2">
+
 
 
                     </div>
@@ -86,18 +87,13 @@
                     <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                    <div class="contenedor-explicacion-paralelogramo">
-                        explicacion
-
-
-                    </div>
 
                 </div>
             </div>
             <div class="recuadro-explicacion-5 animate__animated animate__fadeIn" id="slide-5">
                 <h4>4. En conclusión.</h4>
                 <div class="contenedor">
-                    <video width="420" height="360" id="videoescena4" postert="./assets/imagenes/paraleloescena4.mp4"
+                    <video width="480" height="360" id="videoescena4" postert="./assets/imagenes/paraleloescena4.mp4"
                         inline>
                         <source src="eye-of-the-tiger-video.webm" type="video/webm">
                         <source src="./assets/imagenes/paraleloescena4.mp4" type="video/mp4">
@@ -107,8 +103,8 @@
                     <!-- <div class="contenedor-imagen-paralelogramo" id="imagen-paralelogramo">
                             <x-gif debug src="https://s3.amazonaws.com/heather-codepen/extfront.gif"></x-gif>
                         </div> -->
-                    <div class="contenedor-explicacion-paralelogramo">
-                        explicacion
+                    <div class="contenedor-explicacion-paralelogramo" id="texto-explicacion-4">
+
 
 
                     </div>
@@ -116,64 +112,77 @@
                 </div>
             </div>
             <div class="recuadro-explicacion-6 animate__animated animate__fadeIn" id="slide-6">
-                <h4>Ejercicio</h4>
-                <div class="contenedor-actividades">
-                    <div class="contenedor-figuras">
-                    <div id="ejercicio-1">
-                        <div id="figura1B"></div>
-                        <div id="figura1A"></div>
-                    </div>
-                    <div id="ejercicio-2">
-                        <div id="figura2A"></div>
-                        <div id="figura2B"></div>
-                        
-                    </div>
-                    <div id="ejercicio-3">
-                        <div id="figura3A"></div>
-                        <div id="figura3B"></div>
-                        
-                    </div>
-                    
-                    <div id="ejercicio-4">
-                        <div id="figura4A"></div>
-                        <div id="figura4B"></div>
-                        
-                    </div>
-
-                    <div id="inputs-b-h">
-                        <div>
-                            b= <input id="input-b" type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        </div>
-                        <div>
-                            h= <input id="input-h" type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        </div>
-                        <div>
-                            <div id="imagen-correcta-b-h" type="text"></div>
-                        <div id="imagen-incorrecta-b-h"></div>
-                        </div>
-                        
-                    </div>
-                   
-                    <div class="inputs" id="contenedor-inputs-actividad1">
-                        <div><span>A = b <span class="ast">*</span> h</span></div>
-                        <div>A = <input type="text" id="input-b-m" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"> <span class="ast">*</span> <input type="text" id="input-h-m" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                        </div>
-                        <div>A = <input type="text" id="resultado" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"> Cuadritos
-                            <div id="imagen-correcta-resultado"></div>
-                            <div id="imagen-incorrecta-resultado"></div>
-                        </div>
-                        
-                       
-                     </div>
-                    </div>
-                    
-                </div>
-                <div class="botones-actividad">
-                    <div class="button_cortar" id="cortar-ejercicio1" onclick="cortar()">Cortar</div>
-                <div class="button_cortar enebled-boton" id="comprobar-ejercicio1" onclick="actividadValidacion(1)">Comprobar</div>
-                <div onclick="siguiente_ejercicio()" id="siguiente_ejercicio" class="button_cortar enebled-boton" >Siguiente&nbsp;▶</div>
-                </div>
                 
+                <div class="contenedor-actividades">
+                    <h4>Ejercicios</h4>
+                    <div class="contenedor-figuras">
+                        <div id="ejercicio-1">
+                            <div id="figura1B"></div>
+                            <div id="figura1A"></div>
+                        </div>
+                        <div id="ejercicio-2">
+                            <div id="figura2A"></div>
+                            <div id="figura2B"></div>
+
+                        </div>
+                        <div id="ejercicio-3">
+                            <div id="figura3A"></div>
+                            <div id="figura3B"></div>
+
+                        </div>
+
+                        <div id="ejercicio-4">
+                            <div id="figura4A"></div>
+                            <div id="figura4B"></div>
+
+                        </div>
+
+                        <div id="inputs-b-h">
+                            <div>
+                                b= <input id="input-b" type="text" maxlength="1"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div>
+                                h= <input id="input-h" type="text" maxlength="1"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div>
+                                <div id="imagen-correcta-b-h" type="text"></div>
+                                <div id="imagen-incorrecta-b-h"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="inputs" id="contenedor-inputs-actividad1">
+                            <div><span>A = b <span class="ast">.</span> h</span></div>
+                            <div>A = <input type="text" id="input-b-m" maxlength="1"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                <span class="ast">.</span> <input type="text" id="input-h-m" maxlength="1"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <div>A = <input type="text" id="resultado" maxlength="2"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                Cuadritos
+                                <div id="imagen-correcta-resultado"></div>
+                                <div id="imagen-incorrecta-resultado"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="mensajeActividad">
+                        Se deben ingresar los campos.
+                    </div>
+                    <div class="botones-actividad">
+                        <div class="button_cortar" id="cortar-ejercicio1" onclick="cortar()">Cortar</div>
+                        <div class="button_cortar enebled-boton" id="comprobar-ejercicio1" onclick="actividadValidacion(1)">
+                            Comprobar</div>
+                        <div onclick="siguiente_ejercicio()" id="siguiente_ejercicio" class="button_cortar enebled-boton">
+                            Siguiente&nbsp;▶</div>
+                    </div>
+                </div>
+               
+
 
             </div>
             <div style="height: 38px;width: 100%;display: flex;justify-content: space-between;">
