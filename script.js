@@ -31,6 +31,21 @@ let respuestasInputs = [
 	}
 ]
 
+let posicionxOf1=document.getElementById('figura1B').x
+let posicionyOf1=document.getElementById('figura1B').y
+/* document.getElementById('figura2A').x
+document.getElementById('figura2A').y
+document.getElementById('figura3A').x
+document.getElementById('figura3A').y
+document.getElementById('figura4A').x
+document.getElementById('figura4A').y */
+
+let repeatAnimation;
+
+			
+			
+			
+
 let presentacion_slide = 0
 let audio;
 let audioOvers;
@@ -218,49 +233,20 @@ function cortar() {
 	posicionCorteFigura++
 	switch (posicionCorteFigura) {
 		case 1:
-			gsap.to('#figura1B', {
-				duration: 3,
-				x: 125,
-				ease: Back.easeOut,
-				onComplete() {
-					finAnimacion()
-				},
-			})
+			gsap.fromTo("#figura1B", {x: 0}, {x: 127, duration: 3,ease:Back.easeOut,onComplete:finAnimacion});
 			break;
 		case 2:
-
-			gsap.to('#figura2A', {
-				duration: 3,
-				x: 242,
-				ease: Back.easeOut,
-				onComplete() {
-					finAnimacion()
-				},
-			})
+			let tamanob2=document.getElementById('figura2B').offsetWidth 
+		
+			gsap.fromTo('#figura2A',{x: 0}, {x: tamanob2,duration: 3,ease:Back.easeOut,onComplete:finAnimacion});
 			break;
 		case 3:
-
-
-			gsap.to('#figura3A', {
-				duration: 3,
-				x: 215,
-				ease: Back.easeOut,
-				onComplete() {
-					finAnimacion()
-				},
-			})
+			let tamanob3=document.getElementById('figura3B').offsetWidth 
+			gsap.fromTo('#figura3A', {x: 0},{x: tamanob3,duration: 3,ease:Back.easeOut,onComplete:finAnimacion});
 			break;
 		case 4:
-
-			gsap.to('#figura4A', {
-				duration: 3,
-				x: 190,
-				ease: Back.easeOut,
-				onComplete() {
-					finAnimacion()
-				},
-			})
-
+			let tamanob4=document.getElementById('figura4B').offsetWidth 
+			gsap.fromTo('#figura4A', {x: 0},{x: tamanob4,duration: 3,ease:Back.easeOut,onComplete:finAnimacion});
 			break;
 
 		default:
@@ -342,15 +328,18 @@ function actividadValidacion(posicion) {
 }
 
 function siguiente_ejercicio() {
-	alert(posicionCorteFigura)
-	if (posicionCorteFigura == 3) {
-
-		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display = 'none';
+	if (posicionCorteFigura > 3) {
 		posicionCorteFigura = 0
-		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display = 'block'
+		//Restaurando la fguras de posicion
+		document.getElementById('figura1B').removeAttribute('style')
+		document.getElementById('figura2A').removeAttribute('style')
+		document.getElementById('figura3A').removeAttribute('style')
+		document.getElementById('figura4A').removeAttribute('style')
+		document.getElementById(figurasEjercicios[3]).style.display = 'none';
+		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display = 'flex'
 	} else {
 		document.getElementById(figurasEjercicios[posicionCorteFigura - 1]).style.display = 'none';
-		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display = 'block'
+		document.getElementById(figurasEjercicios[posicionCorteFigura]).style.display = 'flex'
 	}
 	document.getElementById('siguiente_ejercicio').classList.add("enebled-boton")
 	document.getElementById('comprobar-ejercicio1').classList.add("enebled-boton")

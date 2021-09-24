@@ -654,16 +654,82 @@ input[type="text"]{
         align-content: center;
         align-items: center;
         flex-direction: column;
-        width: 37vh;
+        width: auto;
         height: 49vh;
     }
  
     #videoescena1, #videoescena2,#videoescena3,#videoescena4 {
         margin: 0px auto;
-        width: 40vh;
+        width: 36vh;
     }
 
     .botones-actividad{
       flex-direction:column ;
     }
+
+    #figura2A {
+      width: 43px;
+      height: 79px;
+      background-image: url(./assets/imagenes/actividadimagenes/p2A.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      display: inline-block;
+      z-index: 999999;
+  }
+  #figura2B {
+    width: 153px;
+    height: 92px;
+    background-image: url(./assets/imagenes/actividadimagenes/p2B.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    z-index: -99999;
+}
+
+#figura3A {
+  width: 62px;
+  height: 121px;
+  background-image: url(./assets/imagenes/actividadimagenes/p3A.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  display: inline-block;
+}
+
+#figura3B {
+  width: 151px;
+  height: 121px;
+  background-image: url(./assets/imagenes/actividadimagenes/p3B.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+  z-index: -99999;
+}
+
+#figura4A {
+  width: 46px;
+  height: 58px;
+  background-image: url(./assets/imagenes/actividadimagenes/p4A.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  display: inline-block;
+}
+
+#figura4B {
+  width: 145px;
+  height: 121px;
+  background-image: url(./assets/imagenes/actividadimagenes/p4B.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+  z-index: -99999;
+}
   }
